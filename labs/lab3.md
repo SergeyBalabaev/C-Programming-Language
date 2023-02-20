@@ -5,4 +5,7 @@
 y = $\sqrt{\frac{x+5}{x+1}}$
 
 3. Написать программу, вычисляющую функцию:  
-y = {█(x^2*5;      x<0@0;               x=0@(x^3+1)/(x^2+1);    x>0)┤
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $5x^{2}; x<0$  
+y = | $0; x=0$  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| $\frac{x^{3}+1}{x^{2}+1}; x>0$
+
