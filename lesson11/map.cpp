@@ -17,4 +17,7 @@ int main()
     m["Literature"] = 4;
     m["Russian"] = 4;
     print_map(m);
+
+    auto it = m.find("Math");
+    std::cout << (*it).first << " " << (*it).second << "\n";;
 }
