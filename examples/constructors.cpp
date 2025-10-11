@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 
-
 class Point {
 public:
 	Point();
@@ -11,9 +10,18 @@ public:
 	Point(Point&& T) noexcept;
 	Point& operator=(const Point& other) ;
 	Point& operator=(Point&& other) noexcept;
+	void print();
 	int x;
 	int y;
 };
+
+
+// Конструктор копирования
+Point::Point(const Point& T) {
+	std::cout << "Copy constructor" << std::endl;
+	x = T.x;
+	y = T.y;
+}
 
 Point::Point() {
 	std::cout << "Default constructor" << std::endl;
@@ -29,18 +37,15 @@ Point::Point(int _x, int _y) : x(_x), y(_y) {
 	std::cout << "Parametr constructor" << std::endl;
 }
 
-Point::Point(const Point& T) {
-	std::cout << "Copy constructor" << std::endl;
-	x = T.x;
-	y = T.y;
-}
 
 
+// Конструктор перемещения
 Point::Point(Point&& T) noexcept {
 	std::cout << "Move constructor" << std::endl;
 	x = T.x;
 	y = T.y;
-	T.x = T.y = 0;
+	T.x = 0;
+	T.y = 0;
 }
 
 Point& Point::operator=(Point&& other) noexcept
