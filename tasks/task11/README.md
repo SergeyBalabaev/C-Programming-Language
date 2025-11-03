@@ -1,4 +1,4 @@
-## Задача 8. Применение паттернов проектирования  - Factory Method
+## Задача 11. Применение паттернов проектирования  - Factory Method
 
 1. **Реализовать паттерн Factory Method**  
    - Создать класс `FigureFactory`, содержащий метод `Figure* create(const std::string& type)`.  
